@@ -52,17 +52,17 @@ nav {
 }
 .creator{
     margin: 10px;
-    width: 80rem;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 .creator .box{
     background-color: white; /* Change to your desired background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
     border-radius: 8px; 
-    width: 40%;
+    width: 30%;
     margin: 15px;
 }
 .creator .box img{
