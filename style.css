@@ -62,7 +62,8 @@ nav {
     background-color: white; /* Change to your desired background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
     border-radius: 8px; 
-    width: 30%;
+    width: 40%;
+    height: 13rem;
     margin: 15px;
 }
 .creator .box img{
