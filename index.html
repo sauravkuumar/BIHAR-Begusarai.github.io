@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>final</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,20 +17,31 @@
             </div>
             <h2><span>Begusarai</span>❤️</h2>
             <ul class="nav-links">
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScdJcqd2jRSmfVAdWRgMRqMeFsvBgP8ytgKXL-0j1KLw3HAhA/viewform">REGISTER!</a></li>
                 <li><a href="information.html">INFORMATION</a></li>
-                <li><a href="user_of_begusarai.html">USER OF BEGUSARAI</a></li>
+                <li><a href="user_of_begusarai.html">BEGUSARAI_USER</a></li>
             </ul>
         </nav>
         <!------NAVBAR END-------->
-        </div>
     </div>
    
     <!---------------Creator-------------->
     <div class="heading">
         <h1>POPULAR_CREATORS</h1>
     </div>
-    <div class="creator">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by name">
+        <button onclick="searchByName()">GO</button>
+    </div>
+    
+    <div id="searchResults">
+        <!-- Search results will be displayed here -->
+    </div>
+    <style>
         
+        
+    </style>
+    <div class="creator">
         <div class="box">
             <div class="img">
             <a href="https://www.instagram.com/begusarai_se_hai/"> </a><a href=""><img src="https://i.ibb.co/dbhGhn5/begusaraisehai.png" alt="">
@@ -48,7 +59,6 @@
             </h3></a>
         </div>
         </div>
-
 <!------------------------------copied ---------->
         <div class="box">
             <div class="img">
@@ -162,10 +172,292 @@ Delhi 🧳<br>
             </h3></a>
         </div>
         </div>
+    </div>
+
+    <style>
+        .creator .box{
+            background-color: white;
+            box-shadow: 0 4px 6px 2px rgba(17, 16, 16, 0.74);
+        }
+        .search-container{
+            display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+        }
+        #searchInput {
+            width: 30%;
+            padding: 10px;
+            font-size: 10px;
+            border-radius: 4px;
+            }
+            button {
+                margin-left: 1rem;
+                background-color: white;
+                color: black;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                height: 35px;
+                width: 80px;
+                border-radius: 4px;
+                font-size: 10px;
+                transition: all 0.3s ease-in-out;
+
+            }
+
+        /* Style for the search results container */
+        #searchResults {
+            margin: 20px;
+            padding: 10px;
+            outline: none;
+        }
+
+        /* Style for each search result box */
+        #searchResults .box {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            background-color: white; /* Change to your desired background color */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Add shadow as needed */
+    border-radius: 8px; 
+    width: 50%;
+    height: 15rem;
+    margin: 15px;
+        }
         
- <!------------------------------copied end  ---------->       
-        </div>
-    <!---------------Creator end -------------->
+        /* Style for the creator's name in search results */
+        #searchResults .box h3 span {
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Style for the verified badge image in search results */
+        #searchResults .box h3 img {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Style for the bio, location, and description in search results */
+        #searchResults .box h3 {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Style for the "MESSAGE" button in search results */
+        #searchResults .box button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* Hover effect for the "MESSAGE" button */
+        #searchResults .box button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Style for the profile image */
+        #searchResults .box img.profile-image {
+            width: 140px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    
+        @media screen and (max-width: 768px) {
+        .search-container{
+            display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+        }
+        #searchInput {
+            width: 30%;
+            padding: 10px;
+            font-size: 10px;
+            border-radius: 4px;
+            }
+            button {
+                margin-left: 1rem;
+                background-color: white;
+                color: black;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                height: 35px;
+                width: 40px;
+                border-radius: 4px;
+                font-size: 10px;
+                transition: all 0.3s ease-in-out;
+
+            }
+        /* Style for the search results container */
+        #searchResults {
+            margin: 20px;
+            padding: 10px;
+            outline: none;
+        }
+
+        /* Style for each search result box */
+        #searchResults .box {
+            padding: 10px;
+            border-radius: 8px;
+            width: 90%;
+            background-color: white;
+            box-shadow: 0 4px 6px 2px rgba(17, 16, 16, 0.74);
+        }
+
+        /* Style for the creator's name in search results */
+        #searchResults .box h3 span {
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Style for the verified badge image in search results */
+        #searchResults .box h3 img {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+        }
+
+        /* Style for the bio, location, and description in search results */
+        #searchResults .box h3 {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Style for the "MESSAGE" button in search results */
+        #searchResults .box button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* Hover effect for the "MESSAGE" button */
+        #searchResults .box button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Style for the profile image */
+        #searchResults .box img.profile-image {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+    }
+    </style>
+    
+    <script>
+        // Simulate a search function (replace this with your actual search functionality)
+        function searchByName() {
+            const searchInput = document.getElementById('searchInput').value;
+            const searchResults = document.getElementById('searchResults');
+            
+            // Replace the following with your actual search logic
+            const creators = [
+                {
+                    name: "begusarai_se_hai",
+                    bio: "𝐁 𝐄 𝐆 𝐔 𝐒 𝐀 𝐑 𝐀𝐈👑",
+                    location: "Community",
+                    profile: "https://i.ibb.co/dbhGhn5/begusaraisehai.png",
+                    description: "DM for paid collaboration-shop advertising."
+                },
+                {
+                    name: "begusaraiblog 603",
+                    bio: "Comedian",
+                    location: "बैंक में नौकरी करता हूं 🙏 बेरोजगार नहीं हुं 😂",
+                    profile: "https://i.ibb.co/Wv5vv0n/begusraivlog.png",
+                    description: "YouTube & Facebook :- 'Begusarai Blog'"
+                },
+                {
+                    name: "himanshusinghbihar",
+                    bio: "Himanshu Raj",
+                    location: "Artist",
+                    profile: "https://i.ibb.co/9vCqvzz/himanshu.png",
+                    description: "Fb & Youtube - Himanshu Singh - Bihar"
+                },
+                {
+                    name: "its_nitishchaurasia",
+                    bio: "nitish kumar",
+                    location: "Video creator",
+                    profile: "https://i.ibb.co/6Jmpw99/its-nitishchaurasia.png",
+                    description: "कलाKAAR😎"
+                },
+                {
+                    name: "sanam_singh_bhumihar",
+                    bio: "सनम सिंह भूमिहार",
+                    location: "Comedian",
+                    profile: "https://i.ibb.co/gyfGsV2/sanam-singh-bhumihar.png",
+                    description: "कॉमेडियन |(बेगुसराय)| बिहार"
+                },
+                {
+                    name: "ahamakshaybharti",
+                    bio: "Akshay Bharti",
+                    location: "METHOD ACT0R",
+                    profile: "https://i.ibb.co/tq9Pn3Z/ahamakshaybharti.png",
+                    description: "For collaboration or paid promotion 📧"
+                },
+                {
+                    name: "saurav_kuumar_",
+                    bio: "𝚂𝚊𝚞𝚛𝚊𝚟",
+                    location: "Video creator",
+                    profile: "https://i.ibb.co/ysKLp76/saurav-kuumar.png",
+                    description: "जय श्री राम",
+                }
+            ];
+
+            const filteredResults = creators.filter(creator =>
+                creator.name.toLowerCase().includes(searchInput.toLowerCase())
+            );
+
+            if (filteredResults.length > 0) {
+                searchResults.innerHTML = "<h2>Search Results:</h2>";
+                const resultsList = document.createElement('ul');
+                
+                filteredResults.forEach(creator => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                    <div class="creator">
+                        <div class="box">
+                            <div class="img">
+                                <a href="https://www.instagram.com/${creator.name}/">
+                                    <img class="profile-image" src="${creator.profile}" alt="${creator.name}'s profile">
+                                </a>
+                                <a href="https://www.instagram.com/${creator.name}/"><button>MESSAGE</button></a>
+                            </div>
+                            <div class="details">
+                                <h3>
+                                    <span>${creator.name}</span><img src="https://i.ibb.co/nP4WDCH/verify.png" ><br>
+                                    ${creator.bio}<br>
+                                    ${creator.location}<br>
+                                    ${creator.description}<br>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                    resultsList.appendChild(listItem);
+                });
+
+                searchResults.appendChild(resultsList);
+            } else {
+                searchResults.innerHTML = "<p>No results found.</p>";
+            }
+        }
+    </script>
     <script src="java.js"></script>
 </body>
 </html>
