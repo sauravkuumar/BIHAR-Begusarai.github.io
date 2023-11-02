@@ -33,6 +33,7 @@ nav {
 
 .nav-links li {
     margin: 0 20px;
+    
 }
 
 .nav-links a {
@@ -40,6 +41,7 @@ nav {
     color: #0000008f;
     font-size: 2rem;
     font-weight: 900;
+    
 }
 .content nav h2 span{
     color: #0074d98f;
@@ -66,7 +68,7 @@ nav {
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Add shadow as needed */
     border-radius: 8px; 
     width: 40%;
-    height: 13rem;
+    height: 15rem;
     margin: 15px;
 }
 .creator .box img{
@@ -161,6 +163,9 @@ nav {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.creator .details h3 img{
+    width:1rem;
+}
 /* information end---------------*/
 /* Media Query for responsive design */
 @media screen and (max-width: 768px) {
@@ -179,6 +184,9 @@ nav {
         width: 100%;
         background-color: #f1e6e6; /* Change to your desired background color */
         box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
+    }
+    .nav-links li a{
+        font-size: 1.5rem;
     }
     .nav-links.active {
         display: flex; /* Show the navigation links when the menu is active */
