@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* nav bar start ----------------------------- */
+
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px 20px;
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+    display: none; /* Hide the menu icon on larger screens */
+}
+
+.bar {
+    background: #0074d98f;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0000008f;
+    font-size: 2rem;
+    font-weight: 900;
+    
+}
+.content nav h2 span{
+    color: #0074d98f;
+}
+/* nav bar end ----------------------------- */
+
+/* CREATOR CSS START ------------------------*/
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.creator{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.creator .box{
+    background-color: white; /* Change to your desired background color */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Add shadow as needed */
+    border-radius: 8px; 
+    width: 40%;
+    height: 15rem;
+    margin: 15px;
+}
+.creator .box img{
+    width: 90px;
+    border-radius: 100%;
+
+}
+.creator .box .img{
+    display: flex;
+
+}
+.creator .box .img a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.creator .box .img a button{
+    width: 7rem;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: #0074d98f;
+    border-radius: 10px;
+    border-color: #0074d98f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.creator .box .img a button:hover{
+    background-color: #0074d94e;
+    transition: 1s;
+}
+.creator .box .details h3 span{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+.creator .box h3{
+    font-size: 0.6rem;
+    margin-left: 1rem;
+}
+/* CREATOR CSS END ------------------------*/
+
+/* information ------------*/
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.information{
+    margin: 10px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.information .box{
+    background-color: white; /* Change to your desired background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
+    border-radius: 8px; 
+    width: 40%;
+    height: 15rem;
+    margin: 15px;
+    display: flex;
+}
+.information .box:hover{
+    background-color: #f1e6e6;
+}
+.information .box p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.information .box img{
+    width: 190px;
+    border-radius: 0;
+    margin: 1rem;
+}
+.information .box .text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.information .box .text button{
+    width: 6rem;
+    height: 1.5rem;
+    text-decoration: none;
+    background-color: #0074d98f;
+    border-radius: 10px;
+    border-color: #0074d98f;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.creator .details h3 img{
+    width:1rem;
+}
+/* information end---------------*/
+/* Media Query for responsive design */
+@media screen and (max-width: 768px) {
+    /* nav bar start----------------------------*/
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+        cursor: pointer;
+    }
+    .nav-links {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        text-align: center;
+        position: fixed;
+        top: 53px;
+        left: 0;
+        width: 100%;
+        background-color: #f1e6e6; /* Change to your desired background color */
+        box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
+    }
+    .nav-links li a{
+        font-size: 1.5rem;
+    }
+    .nav-links.active {
+        display: flex; /* Show the navigation links when the menu is active */
+    }
+    /* nav bar end ----------------------------- */
+    /* CREATOR CSS START ------------------------*/
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.creator{
+    margin: 10px;
+    width: 95%;
+}
+.creator .box{
+    background-color: white; /* Change to your desired background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
+    border-radius: 8px; 
+    width: 90%;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.creator .box img{
+    width: 90px;
+    border-radius: 100%;
+
+}
+.creator .box .img{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+}
+.creator .box .img a{
+    display: flex;
+    
+    align-items: center;
+    text-decoration: none;
+    
+}
+.creator .box .img a button{
+    width: 7rem;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: #0074d98f;
+    border-radius: 10px;
+    border-color: #0074d98f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.creator .box .img a button:hover{
+    background-color: #0074d94e;
+    transition: 1s;
+}
+.creator .box .details h3 span{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+.creator .box h3{
+    font-size: 0.6rem;
+    margin-left: 1rem;
+}
+/* CREATOR CSS END ------------------------*/
+/* information css ------------*/
+.information{
+    margin: 1px;
+    width: 100%;
+}
+.information .box{
+    background-color: white; /* Change to your desired background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow as needed */
+    border-radius: 8px; 
+    width: 90%;
+    height: 15rem;
+    margin: 15px;
+    display: flex;
+}
+.information .box p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.information .box img{
+    width: 35%;
+    height: 60%;
+    border-radius: 0;
+    margin: 1rem;
+}
+.information .box .text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.information .box .text button{
+    width: 6rem;
+    height: 1.5rem;
+    text-decoration: none;
+    background-color: #0074d98f;
+    border-radius: 10px;
+    border-color: #0074d98f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*information css end------------*/
+}
+
