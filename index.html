@@ -3,365 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEGUSARAI</title>
+    <title>User Details Form</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-        /* Add your CSS styles here */
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
         }
 
-        /* Navbar styles */
-        .navbarfull {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            height: 5rem;
-            box-shadow: 0 4px 8px 1px rgba(51, 54, 54, 0.358);
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
 
-        .navbar {
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-            list-style: none;
-        }
-
-        .navbar li {
-            margin-right: 20px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            font-size: 25px;
-            color: black;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .image img {
-            width: 5rem;
-            height: auto;
-        }
-
-        .menu-icon {
-            display: none;
-            cursor: pointer;
-            font-size: 24px;
-            margin-right: 20px;
-        }
-        .navbarfull .image{
-            margin-left: 2rem;
-        }
-        .navbarfull .image{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .heading{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .heading h1{
-            font-size: 1.5rem
-        }
-        .h1{
-            position: relative;
+        .form-container h2 {
+            margin-bottom: 20px;
             font-size: 1.5rem;
-            color: rgb(171, 171, 238);
-            -webkit-text-stroke: 0.3vw #383d52;
-            text-transform: uppercase;
+            color: #333;
+            text-align: center;
         }
-        h1::before{
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            color: red;
-            -webkit-text-stroke: 0vw #383d52;
-            border-right: 2px solid rgb(149, 149, 242);
-            overflow: hidden;
-            animation: animate 6s linear infinite;
-            }
-            @keyframes animate{
-                0%,10%,100%
-                {
-                    width: 0;
-                }
-                70%,90%
-                {
-                    width: 100%;
-                }
-            }
-            .container{
-                height: 30%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: white;
-                border-radius: 8px;
-                margin: 1rem;
-                box-shadow: 0 4px 8px 1px rgba(51, 54, 54, 0.703);
-            }
-            .container .image{
-                display: flex;
-                align-items: center;
-                justify-self: center;
-                margin: 1rem;
-                
-            }   
-            .container .image img{
-                border-radius: 10px;
-                width: 100%;
-            }
-        .container p{
-            margin: 10px;
-        }
-        .container p span{
-            color: red;
-        }
-        @media screen and (max-width: 768px) {
-            .image img {
-                width: 5rem;
-                height: auto;
-            }
-            .main-box {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .main .containerbox{
-                height: 30%;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                background-color: white;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px 1px rgba(51, 54, 54, 0.703);
-            }
-            .container{
-                height: 30%;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                background-color: white;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px 1px rgba(51, 54, 54, 0.703);
-            }
-            .container .image{
-                display: flex;
-                align-items: center;
-                justify-self: center;
-                margin: 1rem;
-                
-            }   
-            .container .image img{
-                border-radius: 10px;
-                width: 100%;
-            }
-            .navbarfull {
-                display: flex;
-                align-items: center;
-                background-color: white;
-                height: 3rem;
-                box-shadow: 0 4px 8px 1px rgba(51, 54, 54, 0.358);
-            }
-            .navbarfull .image{
-                margin-left: 0rem;
-            }
-            .navbarfull {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 1rem;
-            }
-            .menu-icon {
-                display: block;
-            }
-            .navbar li a{
-                font-size: 1.3em;
-            }
-            .navbar {
-                display: none;
-                flex-direction: column;
-                align-items: flex-start;
-                background-color: #ffffff;
-                height: 6rem;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-            }
 
-            .navbar.show {
-                display: flex;
-            }
-            .navbarfull .image {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
         }
-        .heading{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
         }
-        h1{
-            position: relative;
-            color: rgb(171, 171, 238);
-            -webkit-text-stroke: 0.3vw #ffffff;
-            text-transform: uppercase;
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
         }
-        h1::before{
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            color: red;
-            -webkit-text-stroke: 0vw #383d52;
-            border-right: 2px solid rgb(149, 149, 242);
-            overflow: hidden;
-            animation: animate 6s linear infinite;
-            }
-            @keyframes animate{
-                0%,10%,100%
-                {
-                    width: 0;
-                }
-                70%,90%
-                {
-                    width: 100%;
-                }
-            }
-        
-        .container p{
-            margin: 10px;
-        }
-        .container p span{
-            color: red;
+
+        .form-container button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="navbarfull">
-        <div class="image">
-            <img src="https://i.ibb.co/ZBMFjnd/begusarai.png" alt="Logo">
-            <h3>land_of_begusarai</h3>
-        </div>
-        <i class="menu-icon" id="menu-icon" onclick="toggleNavbar()">&#9776;</i>
-        <ul class="navbar" id="navbar">
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScdJcqd2jRSmfVAdWRgMRqMeFsvBgP8ytgKXL-0j1KLw3HAhA/viewform">Register</a></li>
-            <li><a href="creator.html">Creator</a></li>
-            <li><a href="information.html">Information</a></li>
-            <li><a href="user_of_begusarai.html">Begusarai_users</a></li>
-        </ul>
-    </div>
-    
-    <div class="container">
-        
-        <div class="image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Begusarai_railway_station.png">
-        </div>
-        <p>Welcome to the <span>land_of_begusarai</span> This is where you can find out more about our <span>creators</span>, of Begusarai<br><br>
-            ये वेबसाइट अलग-अलग क्रिएटर के मदद से बना है, इस वेबसाइट पर सारा डेटेल्स आपको मिल जाएगा बेगूसराय के बारे में, बेगूसराय में क्या-क्या काम चल रहा है और जो भी क्रिएटर वेरीफाइड है या अच्छे क्रिएटर है इस वेबसाइट पर उन सभी अकाउंट को ब्लर टिक मिल</p>
-            
-    </div>
-    <div class="heading">
-        <h1 data-text="BEGUSARAI....">
-            BEGUSARAI....
-        </h1>
-    </div>
-    <div class="clicknow">
-        <div class="button">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScdJcqd2jRSmfVAdWRgMRqMeFsvBgP8ytgKXL-0j1KLw3HAhA/viewform"><button>Register Now</button></a>
-        </div>
-        <div class="button">
-            <a href="information.html"><button>News📍Bgs</button></a>
-        </div>
-        <div class="button">
-            <a href="creator.html"><button>Creators📍Bgs</button></a>
-        </div>
-        <div class="button">
-            <a href="user_of_begusarai.html"><button>Begusrai user </button></a>
-        </div>
-    </div>
-    <style>
-        /* Style the button */
-        .clicknow {
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition-duration: 0.4s;
-            }
-            .clicknow .button{
-                background-color: rgba(0, 0, 255, 0.434);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition-duration: 0.4s;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-            border-radius: 10px;
-            }
-            .clicknow .button button{
-                border: none;
-                background-color: rgba(0, 0, 255, 0);
-                cursor: pointer;
-                
-            }
-            .clicknow .button button:hover{
-                color: white;
+    <div class="form-container">
+        <h2>User Details Form</h2>
+        <form action="submit.html" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            }
-            
-    </style>
-    <script>
-        // JavaScript for toggling the navbar on small screens
-        function toggleNavbar() {
-            var navbar = document.getElementById('navbar');
-            var menuIcon = document.getElementById('menu-icon');
-            if (navbar.style.display === 'block') {
-                navbar.style.display = 'none';
-            } else {
-                navbar.style.display = 'block';
-            }
-        }
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        // JavaScript for interactivity
-        document.getElementById('click-me').addEventListener('click', function () {
-            document.getElementById('message').textContent = 'You clicked the button!';
-        });
-    </script>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" placeholder="Enter your ID" required>
+
+            <label for="aadhar">Aadhar Number</label>
+            <input type="text" id="aadhar" name="aadhar" placeholder="Enter your Aadhar number" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
